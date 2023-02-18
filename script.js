@@ -13,9 +13,7 @@ paymentStatus.innerHTML = '';
 let thankyouMsg = document.getElementById('thankyou_Msg');
 thankyouMsg.innerHTML = '';
 
-function Order(){
 
-    document.getElementById("hidden").style.display = "block";
 
 // Get menu function
 function getmenu(){
@@ -100,7 +98,9 @@ function  thankyouFnc(){
 
 
 //Promise chaining
+function Order(){
 
+    document.getElementById("hidden").style.display = "block";
 getmenu()
     .then((data1) => take_order(data1))
     .then(() => orderPrep())
@@ -109,6 +109,5 @@ getmenu()
     .catch((e) => {
         console.log("ERROR>>>", e);
       });
-    
     
 }
